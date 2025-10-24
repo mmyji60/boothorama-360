@@ -74,6 +74,13 @@ const I18N = {
     qr_p:
       "Si le partage de lien Drive est activé, toute personne disposant du lien/QR peut accéder à la vidéo selon vos réglages Drive. Vous pouvez désactiver le partage ou supprimer le fichier à tout moment.",
 
+    // --- 9 bis ---
+    revoke: "9 bis. Déconnexion & révocation Google",
+    revoke_p1:
+      "<strong>Dans l’app</strong> : vous pouvez vous déconnecter de Google pour stopper les exports futurs. Les vidéos déjà exportées restent dans votre Drive jusqu’à suppression par vous.",
+    revoke_p2:
+      "<strong>Dans votre compte Google</strong> : vous pouvez <em>révoquer l’accès</em> de Boothorama 360 (Compte Google → Sécurité → Accès des tiers → retirer l’accès). Après révocation, l’app ne pourra plus exporter vers Drive tant que vous ne reconnectez pas votre compte. Les liens/QR existants restent valides tant que le partage Drive n’est pas désactivé ou que le fichier n’est pas supprimé.",
+
     delete: "10. Suppression",
     delete_l1:
       "<strong>Depuis l’app</strong> : bouton « Supprimer » (local) ; si l’option est activée, suppression également sur Drive.",
@@ -173,6 +180,13 @@ const I18N = {
     qr: "9. Link/QR sharing",
     qr_p:
       "If Drive link sharing is enabled, anyone with the link/QR can access the video according to your Drive settings. You may disable sharing or delete the file at any time.",
+
+    // --- 9 bis ---
+    revoke: "9 bis. Sign-out & Google access revocation",
+    revoke_p1:
+      "<strong>In the app</strong>: you can sign out of Google to stop future exports. Videos already exported remain in your Drive until you delete them.",
+    revoke_p2:
+      "<strong>In your Google Account</strong>: you can <em>revoke Boothorama 360 access</em> (Google Account → Security → Third-party access → remove). After revocation, the app cannot export to Drive until you reconnect. Existing links/QRs stay valid unless you disable Drive sharing or delete the file.",
 
     delete: "10. Deletion",
     delete_l1:
@@ -274,11 +288,18 @@ const I18N = {
     qr_p:
       "Si habilitas la compartición de enlace de Drive, cualquiera con el enlace/QR puede acceder según tu configuración de Drive. Puedes desactivar la compartición o eliminar el archivo cuando quieras.",
 
+    // --- 9 bis ---
+    revoke: "9 bis. Cierre de sesión y revocación en Google",
+    revoke_p1:
+      "<strong>En la app</strong>: puedes cerrar sesión en Google para detener futuras exportaciones. Los vídeos ya exportados permanecen en tu Drive hasta que los elimines.",
+    revoke_p2:
+      "<strong>En tu Cuenta de Google</strong>: puedes <em>revocar el acceso</em> de Boothorama 360 (Cuenta de Google → Seguridad → Acceso de terceros → retirar). Tras la revocación, la app no podrá exportar a Drive hasta que vuelvas a conectar. Los enlaces/QR existentes siguen siendo válidos salvo que desactives la compartición o elimines el archivo.",
+
     delete: "10. Eliminación",
     delete_l1:
       "<strong>Desde la app</strong>: «Eliminar» (local) y, si está activado, también en Drive.",
     delete_l2:
-      "<strong>Desde Google Drive</strong>: elimina el archivo o revoca la compartición.",
+      "<strong>Desde Google Drive</strong>: elimina el archivo o desactiva la compartición.",
 
     rights: "11. Tus derechos",
     rights_l1:
