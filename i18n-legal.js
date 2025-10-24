@@ -105,4 +105,14 @@ function applyI18n(lang) {
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute('content', d.meta_desc);
 
-  document.querySelectorAll('[data-i18n]').forEach(el =>
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (d[k] !== undefined) el.innerHTML = d[k];
+  });
+
+  const y = document.getElementById('y');
+  if (y) y.textContent = new Date().getFullYear();
+}
+
+document.addEventListener('DOMContentLoaded', () => applyI18n(detectLang()));
+</script>
