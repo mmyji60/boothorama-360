@@ -1,39 +1,41 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Politique de confidentialité – Boothorama 360</title>
+  <title data-i18n="title">Politique de confidentialité – Boothorama 360</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Politique de confidentialité de l'application Boothorama 360.">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" data-i18n="meta_desc"
+        content="Politique de confidentialité de l'application Boothorama 360.">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logo.png">
+  <!-- SEO hreflang (pages uniques mais paramètre ?lang=) -->
+  <link rel="alternate" href="?lang=fr" hreflang="fr">
+  <link rel="alternate" href="?lang=en" hreflang="en">
 </head>
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="./">
-  <span class="brand__logo brand__logo--xl">
-    <img src="logo.png" alt="Boothorama 360">
-  </span>
-  <span class="brand__name">Boothorama 360</span>
-</a>
-
-      <nav class="nav">
-        <a href="./index.html" aria-current="page">Confidentialité</a>
-        <a href="./mentions-legales.html">Mentions légales</a>
-        <a href="./faq.html">FAQ</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container header__inner">
+    <a class="brand" href="./">
+      <span class="brand__logo brand__logo--xl">
+        <img src="logo.png" alt="Boothorama 360">
+      </span>
+      <span class="brand__name">Boothorama 360</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="./" data-i18n="nav_privacy" aria-current="page">Confidentialité</a>
+      <a href="mentions-legales.html" data-i18n="nav_legal">Mentions légales</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+    </nav>
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero container">
     <div>
-      <p class="badge badge--ok">Conforme RGPD</p>
-      <h1 class="hero__title">Politique de confidentialité</h1>
-      <p class="hero__subtitle">
+      <p class="badge badge--ok" data-i18n="badge_rgpd">Conforme RGPD</p>
+      <h1 class="hero__title" data-i18n="h1">Politique de confidentialité</h1>
+      <p class="hero__subtitle" data-i18n="intro">
         Nous expliquons ici quelles données sont traitées par <strong>Boothorama 360</strong>,
         pourquoi et pendant combien de temps. Aucune publicité, aucun traqueur.
       </p>
@@ -43,57 +45,56 @@
   <!-- CONTENT -->
   <main class="container content">
     <article class="card">
-      <h2>1. Données traitées</h2>
+      <h2 data-i18n="s1">1. Données traitées</h2>
       <ul>
-        <li><strong>Médias locaux</strong> : vidéos et images enregistrées via l’app &mdash; stockées <em>sur l’appareil</em>.</li>
-        <li><strong>Partage Google Drive (optionnel)</strong> : si vous l’activez, un lien de partage est
-          mémorisé localement pour retrouver votre fichier.</li>
-        <li><strong>Diagnostic</strong> : journaux d’erreur anonymes (si activé dans iOS) pour améliorer la stabilité.</li>
+        <li data-i18n="s1_l1"><strong>Médias locaux</strong> : vidéos et images enregistrées via l’app — stockées <em>sur l’appareil</em>.</li>
+        <li data-i18n="s1_l2"><strong>Partage Google Drive (optionnel)</strong> : si activé, un lien de partage est mémorisé localement.</li>
+        <li data-i18n="s1_l3"><strong>Diagnostic</strong> : journaux d’erreur anonymes (si activé dans iOS) pour la stabilité.</li>
       </ul>
 
-      <h2>2. Finalités</h2>
-      <p>Fournir les fonctionnalités de capture, post-traitement et partage dans le cadre d’un photobooth 360.</p>
+      <h2 data-i18n="s2">2. Finalités</h2>
+      <p data-i18n="s2_p">Fournir la capture, le post-traitement et le partage dans le cadre d’un photobooth 360.</p>
 
-      <h2>3. Base légale</h2>
-      <p>Exécution du contrat (utilisation de l’app) et intérêt légitime à assurer son bon fonctionnement.</p>
+      <h2 data-i18n="s3">3. Base légale</h2>
+      <p data-i18n="s3_p">Exécution du contrat (utilisation de l’app) et intérêt légitime d’assurer le bon fonctionnement.</p>
 
-      <h2>4. Conservation</h2>
+      <h2 data-i18n="s4">4. Conservation</h2>
       <ul>
-        <li><strong>Sur l’appareil</strong> : jusqu’à suppression par l’utilisateur (via l’app).</li>
-        <li><strong>Sur Google Drive</strong> : tant que vous conservez le fichier dans votre Drive.</li>
+        <li data-i18n="s4_l1"><strong>Sur l’appareil</strong> : jusqu’à suppression par l’utilisateur.</li>
+        <li data-i18n="s4_l2"><strong>Sur Google Drive</strong> : tant que le fichier est conservé dans votre Drive.</li>
       </ul>
 
-      <h2>5. Partage et tiers</h2>
-      <p>Nous ne vendons pas de données. En cas d’upload Drive, Google agit comme fournisseur tiers
-        soumis à ses propres conditions et politique de confidentialité.</p>
+      <h2 data-i18n="s5">5. Partage et tiers</h2>
+      <p data-i18n="s5_p">Aucune vente de données. L’upload Drive implique Google en tant que fournisseur tiers, soumis à ses propres politiques.</p>
 
-      <h2>6. Vos droits</h2>
+      <h2 data-i18n="s6">6. Vos droits</h2>
       <ul>
-        <li>Suppression locale des vidéos depuis l’app.</li>
-        <li>Suppression des fichiers directement depuis votre compte Google Drive.</li>
-        <li>Pour toute demande, contactez-nous.</li>
+        <li data-i18n="s6_l1">Suppression locale des vidéos depuis l’app.</li>
+        <li data-i18n="s6_l2">Suppression des fichiers depuis votre compte Google Drive.</li>
+        <li data-i18n="s6_l3">Contactez-nous pour toute demande.</li>
       </ul>
 
-      <h2>7. Contact</h2>
-      <p>Questions privacy : <a href="mailto:privacy@exemple.com">privacy@exemple.com</a></p>
+      <h2 data-i18n="s7">7. Contact</h2>
+      <p><span data-i18n="contact_label">Questions privacy :</span> <a href="mailto:privacy@exemple.com">privacy@exemple.com</a></p>
 
-      <p class="small muted">Dernière mise à jour : <time datetime="2025-10-24">24/10/2025</time></p>
+      <p class="small muted">
+        <span data-i18n="updated">Dernière mise à jour :</span>
+        <time id="lastUpdate" datetime="2025-10-24">24/10/2025</time>
+      </p>
     </article>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="muted small">© <span id="y"></span> Boothorama 360 •
-        <a href="./mentions-legales.html">Mentions légales</a> •
-        <a href="./faq.html">FAQ</a>
+      <p class="muted small">
+        © <span id="y"></span> Boothorama 360 •
+        <a href="mentions-legales.html" data-i18n="nav_legal">Mentions légales</a> •
+        <a href="faq.html" data-i18n="nav_faq">FAQ</a>
       </p>
     </div>
   </footer>
 
-  <script>
-    // année automatique
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script src="i18n.js"></script>
 </body>
 </html>
