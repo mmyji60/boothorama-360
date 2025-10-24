@@ -1,4 +1,3 @@
-<script>
 const I18N = {
   fr: {
     title: "FAQ – Boothorama 360",
@@ -68,31 +67,29 @@ const I18N = {
   }
 };
 
-function detectLang(){
+// Only allow URL override; default to English
+function detectLang() {
   const params = new URLSearchParams(location.search);
   const forced = params.get("lang");
   if (forced && ["en","fr","es"].includes(forced)) return forced;
-  const list = (navigator.languages && navigator.languages.length)
-    ? navigator.languages
-    : [navigator.language || "en"];
-  for (const l of list){
-    const base = String(l||"").toLowerCase().slice(0,2);
-    if (["en","fr","es"].includes(base)) return base;
-  }
   return "en";
 }
+
 function applyI18n(lang){
   const d = I18N[lang] || I18N.en;
   document.documentElement.lang = lang;
   document.title = d.title;
+
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute('content', d.meta_desc);
+
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k = el.getAttribute('data-i18n');
     if (d[k] !== undefined) el.innerHTML = d[k];
   });
+
   const y = document.getElementById('y');
   if (y) y.textContent = new Date().getFullYear();
 }
+
 document.addEventListener('DOMContentLoaded', ()=>applyI18n(detectLang()));
-</script>
