@@ -54,28 +54,18 @@
 
       <h2 data-i18n="account">2. Comptes et authentification</h2>
       <ul>
-        <li data-i18n="account_l1"><strong>Compte anonyme</strong> : aucun identifiant nominatif n’est collecté.</li>
-        <li data-i18n="account_l2"><strong>Connexion Google (optionnelle)</strong> : via OAuth pour exporter des vidéos dans VOTRE Google Drive. Nous recevons uniquement les jetons nécessaires aux fonctionnalités choisies.</li>
+        <li data-i18n="account_l1"><strong>Compte anonyme</strong> : création d’un identifiant technique par Firebase Authentication, sans nom ni e-mail.</li>
+        <li data-i18n="account_l2"><strong>Connexion Google (optionnelle)</strong> : via <em>Firebase Authentication</em> (OAuth Google). Nous ne recevons que les jetons nécessaires à l’authentification et, si vous activez l’export, à la mise en ligne sur VOTRE Google Drive.</li>
       </ul>
-
+      
       <h2 data-i18n="s1">3. Données traitées</h2>
       <ul>
-        <li data-i18n="s1_l1">
-          <strong>Médias locaux</strong> : vidéos/images capturées dans l’app — stockées <em>sur l’appareil</em>. Aucun envoi vers nos serveurs.
-        </li>
-        <li data-i18n="s1_l2">
-          <strong>Export Google Drive (option)</strong> : si activé, les vidéos montées sont téléversées dans votre Drive.
-          L’app conserve localement l’ID fichier/lien de partage pour faciliter la gestion (QR code).
-        </li>
-        <li data-i18n="s1_l3">
-          <strong>Permissions</strong> : accès <em>caméra</em> et <em>micro</em> (pour filmer), <em>stockage</em> (pour enregistrer), et <em>réseau</em> (pour l’upload).
-        </li>
-        <li data-i18n="s1_l4">
-          <strong>Abonnement</strong> : l’état de l’abonnement (actif/expiré) et l’identifiant d’achat fournis par l’App Store / Google Play. Nous ne traitons pas vos données de carte bancaire.
-        </li>
-        <li data-i18n="s1_l5">
-          <strong>Diagnostic</strong> : journaux d’erreur anonymes (si activé dans le système) pour la stabilité.
-        </li>
+        <li data-i18n="s1_l1"><strong>Médias locaux</strong> : vidéos/images capturées dans l’app — stockées <em>uniquement sur l’appareil</em>. Aucun envoi vers nos serveurs.</li>
+        <li data-i18n="s1_l2"><strong>Identifiants d’authentification</strong> (Firebase Auth) : identifiant utilisateur (<code>uid</code>), fournisseur (Google/Anonyme), et le cas échéant les métadonnées exposées par Google (ex. e-mail, nom, photo) si vous les avez dans votre profil Google.</li>
+        <li data-i18n="s1_l2b"><strong>Export Google Drive (option)</strong> : si activé, l’app téléverse la vidéo montée dans votre Drive via les jetons Google. Localement, l’app garde l’ID du fichier / le lien de partage (pour QR code).</li>
+        <li data-i18n="s1_l3"><strong>Permissions</strong> : caméra, micro, stockage, réseau.</li>
+        <li data-i18n="s1_l4"><strong>Abonnement</strong> : état de l’abonnement (actif/expiré) et identifiant d’achat App Store / Google Play (aucune donnée de carte chez nous).</li>
+        <li data-i18n="s1_l5"><strong>Diagnostic</strong> : journaux d’erreur anonymes (si activé au niveau de l’OS) pour la stabilité.</li>
       </ul>
 
       <h2 data-i18n="s2">4. Finalités</h2>
@@ -103,23 +93,33 @@
 
       <h2 data-i18n="s5">7. Destinataires et tiers</h2>
       <p data-i18n="s5_p">
-        Nous ne vendons pas vos données. L’export Drive implique <strong>Google</strong> comme fournisseur tiers
-        (Google LLC), soumis à ses propres conditions et mesures de conformité (notamment Clauses Contractuelles Types pour les transferts hors UE).
-        Paiements/abonnements via <strong>Apple App Store</strong> et/ou <strong>Google Play</strong> : ces plateformes traitent vos données de paiement.
+        Nous ne vendons pas vos données. Nous utilisons :
       </p>
-
+      <ul>
+        <li data-i18n="s5_firebase"><strong>Firebase Authentication</strong> (Google) pour gérer les connexions Google et anonymes.</li>
+        <li data-i18n="s5_gdrive"><strong>Google Drive</strong> uniquement si vous activez l’export des vidéos.</li>
+        <li data-i18n="s5_stores"><strong>Apple App Store / Google Play</strong> pour la facturation des abonnements.</li>
+      </ul>
+      <p data-i18n="s5_cloud">
+        Le projet est hébergé dans la <strong>Google Cloud Console</strong> (Google Cloud Platform) associée à l’app. Aucune base de données d’images/vidéos n’est hébergée par nos soins : les médias restent sur votre appareil, ou dans votre Drive si vous l’activez.
+      </p>
+      
       <h2 data-i18n="transfer">8. Transferts hors UE</h2>
       <p data-i18n="transfer_p">
-        L’export vers Google Drive peut impliquer des traitements hors UE. Google applique des garanties adéquates
-        (p. ex. Clauses Contractuelles Types). En utilisant l’option Drive, vous consentez à ce transfert.
+        L’usage de services Google (Firebase Authentication, Google Drive, Google Cloud) peut impliquer des transferts hors UE. Google met en œuvre des garanties (notamment Clauses Contractuelles Types). En activant l’export Drive ou en utilisant la connexion Google, vous consentez à ces transferts.
       </p>
-
+      
       <h2 data-i18n="qr">9. Partage par lien / QR code</h2>
       <p data-i18n="qr_p">
         Si vous activez le lien de partage dans Drive, <strong>toute personne disposant du lien/QR</strong> peut accéder à la vidéo selon les réglages de partage Drive.
         Vous pouvez à tout moment <em>désactiver le partage ou supprimer le fichier</em> depuis Drive.
       </p>
 
+      <h2 data-i18n="revoke">9 bis. Révocation de l’accès Google</h2>
+      <p data-i18n="revoke_p">
+        Vous pouvez révoquer l’accès de Boothorama 360 à votre compte Google depuis les paramètres de votre compte Google (section « Accès des apps »). Après révocation, l’export Drive et le lien/QR ne fonctionneront plus jusqu’à nouvelle autorisation.
+      </p>
+      
       <h2 data-i18n="delete">10. Suppression</h2>
       <ul>
         <li data-i18n="delete_l1"><strong>Depuis l’app</strong> : bouton « Supprimer » (local) ; si l’option est activée, suppression également sur Drive.</li>
