@@ -11,6 +11,7 @@
   <!-- SEO hreflang (pages uniques mais paramètre ?lang=) -->
   <link rel="alternate" href="?lang=fr" hreflang="fr">
   <link rel="alternate" href="?lang=en" hreflang="en">
+  <link rel="alternate" href="?lang=es" hreflang="es">
 </head>
 <body>
   <!-- HEADER -->
@@ -45,37 +46,111 @@
   <!-- CONTENT -->
   <main class="container content">
     <article class="card">
-      <h2 data-i18n="s1">1. Données traitées</h2>
+      <h2 data-i18n="who">1. Qui est responsable ?</h2>
+      <p data-i18n="who_p">
+        Le responsable de traitement est <strong>Boothorama</strong> (voir <a href="mentions-legales.html">mentions légales</a>).
+        Contact DPO/Privacy : <a href="mailto:privacy@exemple.com">privacy@exemple.com</a>.
+      </p>
+
+      <h2 data-i18n="account">2. Comptes et authentification</h2>
       <ul>
-        <li data-i18n="s1_l1"><strong>Médias locaux</strong> : vidéos et images enregistrées via l’app — stockées <em>sur l’appareil</em>.</li>
-        <li data-i18n="s1_l2"><strong>Partage Google Drive (optionnel)</strong> : si activé, un lien de partage est mémorisé localement.</li>
-        <li data-i18n="s1_l3"><strong>Diagnostic</strong> : journaux d’erreur anonymes (si activé dans iOS) pour la stabilité.</li>
+        <li data-i18n="account_l1"><strong>Compte anonyme</strong> : aucun identifiant nominatif n’est collecté.</li>
+        <li data-i18n="account_l2"><strong>Connexion Google (optionnelle)</strong> : via OAuth pour exporter des vidéos dans VOTRE Google Drive. Nous recevons uniquement les jetons nécessaires aux fonctionnalités choisies.</li>
       </ul>
 
-      <h2 data-i18n="s2">2. Finalités</h2>
-      <p data-i18n="s2_p">Fournir la capture, le post-traitement et le partage dans le cadre d’un photobooth 360.</p>
-
-      <h2 data-i18n="s3">3. Base légale</h2>
-      <p data-i18n="s3_p">Exécution du contrat (utilisation de l’app) et intérêt légitime d’assurer le bon fonctionnement.</p>
-
-      <h2 data-i18n="s4">4. Conservation</h2>
+      <h2 data-i18n="s1">3. Données traitées</h2>
       <ul>
-        <li data-i18n="s4_l1"><strong>Sur l’appareil</strong> : jusqu’à suppression par l’utilisateur.</li>
-        <li data-i18n="s4_l2"><strong>Sur Google Drive</strong> : tant que le fichier est conservé dans votre Drive.</li>
+        <li data-i18n="s1_l1">
+          <strong>Médias locaux</strong> : vidéos/images capturées dans l’app — stockées <em>sur l’appareil</em>. Aucun envoi vers nos serveurs.
+        </li>
+        <li data-i18n="s1_l2">
+          <strong>Export Google Drive (option)</strong> : si activé, les vidéos montées sont téléversées dans votre Drive.
+          L’app conserve localement l’ID fichier/lien de partage pour faciliter la gestion (QR code).
+        </li>
+        <li data-i18n="s1_l3">
+          <strong>Permissions</strong> : accès <em>caméra</em> et <em>micro</em> (pour filmer), <em>stockage</em> (pour enregistrer), et <em>réseau</em> (pour l’upload).
+        </li>
+        <li data-i18n="s1_l4">
+          <strong>Abonnement</strong> : l’état de l’abonnement (actif/expiré) et l’identifiant d’achat fournis par l’App Store / Google Play. Nous ne traitons pas vos données de carte bancaire.
+        </li>
+        <li data-i18n="s1_l5">
+          <strong>Diagnostic</strong> : journaux d’erreur anonymes (si activé dans le système) pour la stabilité.
+        </li>
       </ul>
 
-      <h2 data-i18n="s5">5. Partage et tiers</h2>
-      <p data-i18n="s5_p">Aucune vente de données. L’upload Drive implique Google en tant que fournisseur tiers, soumis à ses propres politiques.</p>
-
-      <h2 data-i18n="s6">6. Vos droits</h2>
+      <h2 data-i18n="s2">4. Finalités</h2>
       <ul>
-        <li data-i18n="s6_l1">Suppression locale des vidéos depuis l’app.</li>
-        <li data-i18n="s6_l2">Suppression des fichiers depuis votre compte Google Drive.</li>
-        <li data-i18n="s6_l3">Contactez-nous pour toute demande.</li>
+        <li data-i18n="s2_p1">Fournir la capture 360°, le post-traitement et l’export/partage des vidéos.</li>
+        <li data-i18n="s2_p2">Permettre le partage par <strong>QR code</strong> d’un lien Drive.</li>
+        <li data-i18n="s2_p3">Gérer les achats intégrés/abonnements.</li>
+        <li data-i18n="s2_p4">Améliorer la stabilité via diagnostics (option système).</li>
       </ul>
 
-      <h2 data-i18n="s7">7. Contact</h2>
-      <p><span data-i18n="contact_label">Questions privacy :</span> <a href="mailto:privacy@exemple.com">privacy@exemple.com</a></p>
+      <h2 data-i18n="s3">5. Bases légales</h2>
+      <ul>
+        <li data-i18n="s3_p1"><strong>Exécution du contrat</strong> : fonctionnement de l’app (capture, enregistrement local, lecture).</li>
+        <li data-i18n="s3_p2"><strong>Consentement</strong> : autorisations caméra/micro ; export vers Google Drive ; génération de lien partage/QR.</li>
+        <li data-i18n="s3_p3"><strong>Intérêt légitime</strong> : sécurité, lutte contre la fraude, amélioration technique via diagnostics anonymes.</li>
+      </ul>
+
+      <h2 data-i18n="s4">6. Durées de conservation</h2>
+      <ul>
+        <li data-i18n="s4_l1"><strong>Sur l’appareil</strong> : jusqu’à suppression par vous depuis l’app.</li>
+        <li data-i18n="s4_l2"><strong>Sur Google Drive</strong> : tant que le fichier reste dans votre Drive (vous pouvez le supprimer à tout moment).</li>
+        <li data-i18n="s4_l3"><strong>Jetons OAuth</strong> : durée strictement nécessaire pour l’export, renouvelés/invalidés par Google à échéance.</li>
+        <li data-i18n="s4_l4"><strong>Preuves d’achat</strong> : le temps requis pour la gestion de l’abonnement et les obligations légales comptables.</li>
+      </ul>
+
+      <h2 data-i18n="s5">7. Destinataires et tiers</h2>
+      <p data-i18n="s5_p">
+        Nous ne vendons pas vos données. L’export Drive implique <strong>Google</strong> comme fournisseur tiers
+        (Google LLC), soumis à ses propres conditions et mesures de conformité (notamment Clauses Contractuelles Types pour les transferts hors UE).
+        Paiements/abonnements via <strong>Apple App Store</strong> et/ou <strong>Google Play</strong> : ces plateformes traitent vos données de paiement.
+      </p>
+
+      <h2 data-i18n="transfer">8. Transferts hors UE</h2>
+      <p data-i18n="transfer_p">
+        L’export vers Google Drive peut impliquer des traitements hors UE. Google applique des garanties adéquates
+        (p. ex. Clauses Contractuelles Types). En utilisant l’option Drive, vous consentez à ce transfert.
+      </p>
+
+      <h2 data-i18n="qr">9. Partage par lien / QR code</h2>
+      <p data-i18n="qr_p">
+        Si vous activez le lien de partage dans Drive, <strong>toute personne disposant du lien/QR</strong> peut accéder à la vidéo selon les réglages de partage Drive.
+        Vous pouvez à tout moment <em>désactiver le partage ou supprimer le fichier</em> depuis Drive.
+      </p>
+
+      <h2 data-i18n="delete">10. Suppression</h2>
+      <ul>
+        <li data-i18n="delete_l1"><strong>Depuis l’app</strong> : bouton « Supprimer » (local) ; si l’option est activée, suppression également sur Drive.</li>
+        <li data-i18n="delete_l2"><strong>Depuis Google Drive</strong> : supprimez le fichier ou révoquez son partage.</li>
+      </ul>
+
+      <h2 data-i18n="rights">11. Vos droits</h2>
+      <ul>
+        <li data-i18n="rights_l1">Accès, rectification, effacement, portabilité, limitation, opposition.</li>
+        <li data-i18n="rights_l2">Retrait du consentement (export Drive, liens de partage) à tout moment.</li>
+        <li data-i18n="rights_l3">Réclamation : <strong>CNIL</strong> (cnil.fr) si vous estimez que vos droits ne sont pas respectés.</li>
+      </ul>
+      <p data-i18n="rights_how">
+        Pour exercer vos droits : <a href="mailto:privacy@exemple.com">privacy@exemple.com</a>.
+      </p>
+
+      <h2 data-i18n="security">12. Sécurité</h2>
+      <p data-i18n="security_p">
+        Nous appliquons des mesures techniques et organisationnelles adaptées (chiffrement en transit lors de l’upload, stockage local sur l’appareil, principe de minimisation).
+        Conservez votre appareil et votre compte Google sécurisés (mot de passe, 2FA).
+      </p>
+
+      <h2 data-i18n="minors">13. Mineurs</h2>
+      <p data-i18n="minors_p">
+        L’app n’est pas destinée aux moins de 13 ans. Pour les 13–16 ans dans l’UE, l’autorisation d’un titulaire de l’autorité parentale peut être requise selon le pays.
+      </p>
+
+      <h2 data-i18n="changes">14. Modifications</h2>
+      <p data-i18n="changes_p">
+        Nous pouvons mettre à jour la présente politique. Les changements significatifs seront annoncés dans l’app.
+      </p>
 
       <p class="small muted">
         <span data-i18n="updated">Dernière mise à jour :</span>
