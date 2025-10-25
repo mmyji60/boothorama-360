@@ -215,20 +215,30 @@
       privacy_link: "política de privacidad"
     }
   };
+// Only allow URL override; default to English
+function detectLang() {
+  const params = new URLSearchParams(location.search);
+  const forced = params.get("lang");
+  if (forced && ["en","fr","es"].includes(forced)) return forced;
+  return "en";
+}
 
-  // Remplissage
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    const t = (dict[lang] && dict[lang][key]) || (dict.fr && dict.fr[key]) || "";
-    if (t.includes("<") || t.includes("&")) {
-      el.innerHTML = t; // permet <strong>, <a>, etc.
-    } else {
-      el.textContent = t;
-    }
+function applyI18n(lang) {
+  const d = I18N[lang] || I18N.en;
+  document.documentElement.lang = lang;
+  document.title = d.title;
+
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute('content', d.meta_desc);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (d[k] !== undefined) el.innerHTML = d[k];
   });
 
-  // Année dynamique
-  const y = document.getElementById("y");
+  const y = document.getElementById('y');
   if (y) y.textContent = new Date().getFullYear();
-})();
+}
+
+document.addEventListener('DOMContentLoaded', () => applyI18n(detectLang()));
 </script>
